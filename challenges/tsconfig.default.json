@@ -6,6 +6,9 @@
     "sourceMap": false,
     "rootDir": "./",
     "strict": true,
-    "noEmit": true
+    "noEmit": true,
+    "typeRoots": [
+      "./type.d.ts"
+    ]
   }
 }
