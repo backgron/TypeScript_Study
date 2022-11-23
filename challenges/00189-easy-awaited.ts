@@ -19,16 +19,10 @@ type cases = [
 type error = MyAwaited<number>
 
 // ============= Your Code Here =============
-// type Thenable<T> = {
-//   then: (onfulfilled: (arg: T) => unknown) => unknown
-// }
+type Thenable<K> = Pick<Promise<K>, "then">
 
-// type MyAwaited<T extends Thenable<any> | Promise<any>> = T extends Promise<
-//   infer Inner
-// >
-//   ? Inner extends Promise<any>
-//     ? MyAwaited<Inner>
-//     : Inner
-//   : T extends Thenable<infer U>
-//   ? U
-//   : false
+type MyAwaited<T extends Thenable<any>> = T extends Thenable<infer R>
+  ? R extends Thenable<any>
+    ? MyAwaited<R>
+    : R
+  : false
