@@ -33,19 +33,18 @@
 
 ### keyof
 
-返回interface的key
+keyof 接口的签名数组 类似Object.keys
 
 ### extends
 
-继承于，可以跟三元表达式
+产生 三元表达式的条件、遍历联合类型
 
 ### in
 
-返回interface的value
-
+in 接口的值，类似for in
 ### infer
 
-类型推断，判断是否为某个类型，可以跟三元表达式
+infer 暂定类型变量，类似var 
 
 ### typeof
 
