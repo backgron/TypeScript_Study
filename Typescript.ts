@@ -1,8 +1,10 @@
 // extends 产生 三元表达式的条件、遍历联合类型
 
-// keyof 接口的签名数组 类似Object.keys
+// keyof 接口的签名数组 类似Object.
 
-// in 接口的值，类似for in
+// T[number] 遍历数组
+
+// in 遍历 接口的值，类似for in
 
 // infer 暂定类型变量，类似var
 
