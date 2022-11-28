@@ -12,10 +12,8 @@ type cases = [
 ]
 
 // ============= Your Code Here =============
-type TrimLeft<S extends string> = S extends `${infer R}${infer T}`
-  ? R extends " " | "\n" | "\t"
-    ? TrimLeft<T>
-    : S
+type TrimLeft<S extends string> = S extends `${" " | "\n" | "\t"}${infer T}`
+  ? TrimLeft<T>
   : S
 
 type A = TrimLeft<" str">
