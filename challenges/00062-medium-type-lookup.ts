@@ -20,10 +20,8 @@ type cases = [
 ]
 
 // ============= Your Code Here =============
-// type LookUp<U, T> = Extract<U, {type: T}>
+type LookUp<U, T> = U extends { type: T } ? U : never
 
-type LookUp<U extends { type: string }, T> = U extends any
-  ? U["type"] extends T
-    ? U
-    : never
-  : never
+type B<T> = T extends "b" | "c" ? T : never
+type C = B<"a" | "b" | "c">
+//   ^?
