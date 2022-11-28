@@ -9,6 +9,7 @@
 // infer 暂定类型变量，类似var
 
 // 数组类型可以直接取值 T[0] 和 长度 T['length'] 还可以用... [inferT, ...infer R],
+// 字符串类型也可也用类似的方法分割 `${infer R}${infer T}`
 
 // 可以递归type T<U extends any[], K> = U extends K
 //   ? true
